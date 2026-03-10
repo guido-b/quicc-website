@@ -19,21 +19,37 @@ export async function generateOgImage(title: string, subtitle: string) {
     const fontDataBold = await loadGoogleFont("Inter:wght@700", textToLoad);
 
     const markup = html`
-        <div style="background: #111111; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
-            <div style="display: flex; position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(162,132,94,0.15) 0%, transparent 70%); flex: none;"></div>
-            <div style="display: flex; position: absolute; bottom: -50px; left: -50px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); flex: none;"></div>
+        <div style="background-color: #0f172a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; font-family: 'Inter';">
             
-            <div style="border: 2px solid rgba(162,132,94,0.3); position: absolute; top: 40px; bottom: 40px; left: 40px; right: 40px; border-radius: 12px; display: flex; flex: none;"></div>
-            
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px; width: 100%;">
-                <div style="display: flex; color: #a2845e; font-size: 24px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px;">
-                    Academic Portfolio
+            <div style="display: flex; position: absolute; top: -150px; right: -50px; width: 600px; height: 600px; background-image: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(49, 46, 129, 0)); border-radius: 50%;"></div>
+            <div style="display: flex; position: absolute; bottom: -150px; left: -50px; width: 600px; height: 600px; background-image: linear-gradient(45deg, rgba(167, 139, 250, 0.4), rgba(88, 28, 135, 0)); border-radius: 50%;"></div>
+
+            <div style="display: flex; flex-direction: column; justify-content: space-between; padding: 80px; width: 100%; height: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
+                    <div style="display: flex; align-items: center; padding: 12px 24px; background-color: rgba(255, 255, 255, 0.1); border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <span style="color: #ffffff; font-size: 24px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                            ${subtitle}
+                        </span>
+                    </div>
                 </div>
-                <div style="display: flex; color: #ffffff; font-size: 64px; font-weight: 700; line-height: 1.2; max-height: 240px; overflow: hidden; margin-bottom: 32px;">
-                    ${title}
+
+                <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 20px;">
+                    <div style="display: flex; color: #ffffff; font-size: 84px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin: 0; max-width: 900px; overflow: hidden; max-height: 280px;">
+                        ${title}
+                    </div>
                 </div>
-                <div style="display: flex; color: rgba(255,255,255,0.6); font-size: 32px; font-weight: 400;">
-                    ${subtitle}
+
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <span style="color: #94a3b8; font-size: 28px; font-weight: 400;">Academic Portfolio</span>
+                        <span style="color: #cbd5e1; font-size: 32px; font-weight: 700;">Friedrich Nietzsche</span>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
