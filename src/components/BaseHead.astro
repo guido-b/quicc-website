@@ -90,8 +90,15 @@ const imageUrl = typeof image === 'string'
 	html[data-theme='dark'], html[data-theme='dark'] body { background-color: #0f172a; color-scheme: dark; }
 	html[data-theme='light'], html[data-theme='light'] body { background-color: #ffffff; color-scheme: light; }
 	/* Header: higher specificity (0,1,2) beats scoped rule (0,1,1) — no flash even before component CSS loads */
-	html[data-theme='dark'] header { background: rgba(15, 23, 42, 0.8); }
-	html:not([data-theme='dark']) header { background: rgba(255, 255, 255, 0.85); }
+	html[data-theme='dark'] header { background: rgba(15, 23, 42, 0.8) !important; }
+	html:not([data-theme='dark']) header { background: rgba(255, 255, 255, 0.85) !important; }
+	
+	/* Icon toggle FOUC prevention */
+	.moon-icon { display: none; }
+	.sun-icon { display: block; }
+	html[data-theme='dark'] .moon-icon { display: block !important; }
+	html[data-theme='dark'] .sun-icon { display: none !important; }
+	
 	/* Suppress all transitions until page is fully styled */
 	html:not([data-theme-ready]) *, html:not([data-theme-ready]) *::before, html:not([data-theme-ready]) *::after {
 		transition: none !important;
