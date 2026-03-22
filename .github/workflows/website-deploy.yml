@@ -27,6 +27,17 @@ jobs:
         
       - name: Build with Astro
         run: npm run build
+
+      - name: Process HTML links
+        uses: shravanngoswamii/html-link-action@v1
+        with:
+          site-dir: dist
+          noopener: true
+          noreferrer: true
+          external-target-blank: true
+          strip-tracking-params: true
+          check-links: true
+          fail-on-broken: true
         
       - name: Add .nojekyll file
         run: touch ./dist/.nojekyll
