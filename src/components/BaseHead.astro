@@ -27,6 +27,8 @@ if (currentPath === '') {
 }
 
 const { title, description, image = defaultImg } = Astro.props;
+const atkinsonRegular = url('/fonts/atkinson-regular.woff');
+const atkinsonBold = url('/fonts/atkinson-bold.woff');
 
 const resolveImage = (img: string) => {
     if (img.startsWith('http')) return img;
@@ -139,6 +141,27 @@ const imageUrl = typeof image === 'string'
 
 <link rel="preload" href={url('/fonts/atkinson-regular.woff')} as="font" type="font/woff" crossorigin />
 <link rel="preload" href={url('/fonts/atkinson-bold.woff')} as="font" type="font/woff" crossorigin />
+
+<style
+	is:inline
+	set:html={`
+		@font-face {
+			font-family: "Atkinson";
+			src: url("${atkinsonRegular}") format("woff");
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: "Atkinson";
+			src: url("${atkinsonBold}") format("woff");
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+	`}
+/>
 
 <link rel="canonical" href={canonicalURL} />
 
