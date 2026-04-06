@@ -9,7 +9,7 @@ export const CV_URL = 'https://shravangoswami.com/resume.pdf';
 export const CONTACT = {
   organization: 'Shravan Goswami',
   addressLines: [
-    'Creator of Academic Portfolio',
+    'Creator of Astro Scholar',
   ],
   emails: [
     'contact@shravangoswami.com',
@@ -49,5 +49,5 @@ export const FOOTER_CREDIT = {
   designerName: 'Shravan Goswami',
   designerUrl: 'https://shravangoswami.com',
   sourceLabel: 'Open Source',
-  sourceUrl: 'https://github.com/shravanngoswamii/Academic-Portfolio',
+  sourceUrl: 'https://github.com/shravanngoswamii/astro-scholar',
 };

@@ -16,41 +16,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Detect bump type from commit message
-        id: bump
+      - name: Read version from package.json
+        id: version
         run: |
-          MSG="${{ github.event.head_commit.message }}"
-          if echo "$MSG" | grep -qiE '\[major\]'; then
-            echo "type=major" >> "$GITHUB_OUTPUT"
-          elif echo "$MSG" | grep -qiE '\[minor\]'; then
-            echo "type=minor" >> "$GITHUB_OUTPUT"
-          elif echo "$MSG" | grep -qiE '\[patch\]'; then
-            echo "type=patch" >> "$GITHUB_OUTPUT"
+          VERSION=$(node -p "require('./package.json').version")
+          if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "Invalid semver in package.json: $VERSION"
+            exit 1
+          fi
+          TAG="v$VERSION"
+          MAJOR="v$(echo "$VERSION" | cut -d. -f1)"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "major=$MAJOR" >> "$GITHUB_OUTPUT"
+
+      - name: Check if release tag exists
+        id: tag_check
+        run: |
+          git fetch --tags --force
+          if git rev-parse "${{ steps.version.outputs.tag }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Tag ${{ steps.version.outputs.tag }} already exists. Skipping release."
           else
-            echo "type=none" >> "$GITHUB_OUTPUT"
+            echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Compute next version
-        id: version
-        if: steps.bump.outputs.type != 'none'
-        run: |
-          LATEST=$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -1)
-          LATEST=${LATEST:-v0.0.0}
-          VERSION=${LATEST#v}
-          MAJOR=$(echo "$VERSION" | cut -d. -f1)
-          MINOR=$(echo "$VERSION" | cut -d. -f2)
-          PATCH=$(echo "$VERSION" | cut -d. -f3)
-          case "${{ steps.bump.outputs.type }}" in
-            major) MAJOR=$((MAJOR + 1)); MINOR=0; PATCH=0 ;;
-            minor) MINOR=$((MINOR + 1)); PATCH=0 ;;
-            patch) PATCH=$((PATCH + 1)) ;;
-          esac
-          NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
-          echo "tag=$NEW_TAG" >> "$GITHUB_OUTPUT"
-          echo "major=v${MAJOR}" >> "$GITHUB_OUTPUT"
-
       - name: Tag, release, and advance floating branch
-        if: steps.bump.outputs.type != 'none'
+        if: steps.tag_check.outputs.exists == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

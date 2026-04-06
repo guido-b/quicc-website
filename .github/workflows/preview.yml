@@ -28,7 +28,7 @@ jobs:
 
       - name: Build with Astro
         env:
-          BASE_PATH: /Academic-Portfolio/pr-previews/${{ github.event.pull_request.number }}
+          BASE_PATH: /astro-scholar/pr-previews/${{ github.event.pull_request.number }}
         run: npm run build
 
       - name: Process HTML links
@@ -59,7 +59,7 @@ jobs:
         with:
           message: |
             <!-- preview-url-comment -->
-            Preview the changes: https://shravanngoswamii.github.io/Academic-Portfolio/pr-previews/${{ github.event.pull_request.number }}
+            Preview the changes: https://shravanngoswamii.github.io/astro-scholar/pr-previews/${{ github.event.pull_request.number }}
           comment_tag: preview-url-comment
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

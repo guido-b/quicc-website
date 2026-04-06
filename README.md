@@ -1,7 +1,13 @@
-<h1 align="center">Academic Portfolio</h1>
+<h1 align="center">Astro Scholar</h1>
 
 <p align="center">
 	A clean, modern Astro portfolio template for researchers, professors, students, and academic teams.
+</p>
+
+## Lighthouse
+
+<p align="center">
+	<img src=".github/lighthouse-score.png" alt="Lighthouse score showing 100 across all categories" width="900" />
 </p>
 
 ## Why This Template
@@ -28,12 +34,6 @@ Built with Astro for speed, static output, and straightforward deployment.
 - GitHub Pages deployment workflow
 - PR preview deployment workflow
 
-## Lighthouse
-
-<p align="center">
-	<img src=".github/lighthouse-score.png" alt="Lighthouse score showing 100 across all categories" width="900" />
-</p>
-
 ## Quick Start
 
 1. Clone the repository.
@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:4321/Academic-Portfolio
+Then open http://localhost:4321/astro-scholar
 
 ## Commands
 
@@ -82,8 +82,8 @@ This repo is ready for GitHub Pages.
 
 Base path is configured in `astro.config.mjs`:
 
-- default: `/Academic-Portfolio`
-- PR preview: `/Academic-Portfolio/pr-previews/<PR_NUMBER>`
+- default: `/astro-scholar`
+- PR preview: `/astro-scholar/pr-previews/<PR_NUMBER>`
 
 ## Project Structure
 
