@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
+import remarkInjectToc from './remark-inject-toc.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,7 +12,7 @@ export default defineConfig({
 	base: process.env.BASE_PATH || '/Academic-Portfolio',
 	integrations: [mdx(), sitemap()],
 	markdown: {
-		remarkPlugins: [[remarkToc, { heading: 'Table of Contents' }]],
+		remarkPlugins: [remarkInjectToc, [remarkToc, { heading: 'Table of Contents' }]],
 	},
 	build: {
 		inlineStylesheets: 'always',

@@ -18,6 +18,9 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
+			html {
+				scroll-padding-top: 5.5rem; /* Account for sticky header height when scrolling to anchors */
+			}
 			main {
 				width: 100%;
 				max-width: 100%;
@@ -44,9 +47,14 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 				justify-content: center;
 			}
 
-			.prose {
+			.prose-wrapper {
+				position: relative;
 				width: 760px;
 				max-width: 100%;
+			}
+
+			.prose {
+				width: 100%;
 				padding: 1rem;
 				color: rgb(var(--gray-dark));
 			}
@@ -59,7 +67,7 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 			.prose :global(h2#table-of-contents) {
 				display: none;
 			}
-			.prose > :global(ul:first-of-type) {
+			.prose :global(h2#table-of-contents + ul) {
 				margin-bottom: 2rem;
 				padding: 1rem;
 				background: var(--color-bg-offset);
@@ -67,26 +75,51 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 				border-radius: var(--radius);
 				list-style: none;
 			}
-			.prose > :global(ul:first-of-type) :global(li) {
+			.prose :global(h2#table-of-contents + ul li) {
 				margin-bottom: 0.5rem;
 			}
-			.prose > :global(ul:first-of-type) :global(a) {
+			.prose :global(h2#table-of-contents + ul a) {
 				text-decoration: none;
 				color: var(--color-text-muted);
 			}
-			.prose > :global(ul:first-of-type) :global(a:hover) {
+			.prose :global(h2#table-of-contents + ul a:hover) {
 				color: var(--color-accent);
 			}
 
 			@media (min-width: 1200px) {
-				.prose > :global(ul:first-of-type) {
+				.prose :global(h2#table-of-contents + ul) {
 					position: absolute;
-					top: 1rem;
-					left: calc(50% + 400px); /* Position it to the right of the 760px centered prose */
+					top: 0;
+					left: 100%;
 					width: 250px;
+					margin-left: 2rem;
 					margin-bottom: 0;
 				}
-				.prose > :global(ul:first-of-type)::before {
+				/* This trick makes the absolutely positioned TOC behave "sticky" within the prose wrapper */
+				.prose-wrapper {
+					/* Need to remove position: relative if we want position: sticky to work based on the viewport?
+					   Wait, position absolute cannot be sticky. Let's do this differently.
+					   Since we want sticky, we should make it float or absolutely position it, but sticky needs to be in flow.
+					   Let's absolute position a wrapper if we had one, but we don't.
+					   Let's rethink: .prose > ul can just have `position: absolute; position: sticky;`? No.
+					   If we set `.prose > ul` to `position: absolute` it leaves the flow, fixing the gap.
+					   But it won't be sticky to the viewport.
+					   To make it sticky without a gap, we can use float.
+					   Actually, if we put position: absolute, it's relative to .prose-wrapper.
+					   Then we can't do position: sticky easily.
+					   What if we just use `float: right; margin-right: -280px; width: 250px; position: sticky; top: 5.5rem;`
+					*/
+				}
+				.prose :global(h2#table-of-contents + ul) {
+					position: sticky;
+					float: right;
+					clear: right;
+					margin-right: -280px;
+					top: 5.5rem; /* navbar height (4.5rem) + 1rem padding */
+					max-height: calc(100vh - 6.5rem);
+					overflow-y: auto;
+				}
+				.prose :global(h2#table-of-contents + ul)::before {
 					content: "Table of Contents";
 					display: block;
 					font-weight: 700;
@@ -150,8 +183,9 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 					)}
 				</div>
 				<div class="blog-container">
-					<div class="prose">
-						<div class="title">
+					<div class="prose-wrapper">
+						<div class="prose">
+							<div class="title">
 							<div class="date">
 							<FormattedDate date={pubDate} />
 							{
@@ -173,9 +207,10 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 								))}
 							</div>
 						)}
-						<hr />
-					</div>
-					<slot />
+							<hr />
+						</div>
+						<slot />
+						</div>
 					</div>
 				</div>
 			</article>

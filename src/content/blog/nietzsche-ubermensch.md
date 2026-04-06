@@ -5,7 +5,6 @@ pubDate: 'Mar 10 2024'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 
-## Table of Contents
 
 
 Among all the concepts I have introduced to philosophy, none has been more consistently misunderstood than that of the Übermensch. It has been distorted by nationalists, appropriated by ideologues, and dismissed as dangerous by the timid. Yet I maintain that it remains one of the most vital ideas that philosophy can offer humanity.
