@@ -6,11 +6,12 @@ import AuthorLink from '../components/AuthorLink.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 import { url } from '../utils/paths';
 
-type Props = CollectionEntry<'blog'>['data'] & { id?: string };
+type Props = CollectionEntry<'blog'>['data'] & { id?: string, headings?: { depth: number; slug: string; text: string }[], toc?: boolean };
 
-const { title, description, pubDate, updatedDate, heroImage, authors, id } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, authors, id, headings = [], toc } = Astro.props;
 const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 ---
 
@@ -61,74 +62,6 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 			.prose :global(p) {
 				text-align: justify;
 				hyphens: auto;
-			}
-
-			/* Style the remark-toc output */
-			.prose :global(h2#table-of-contents) {
-				display: none;
-			}
-			.prose :global(h2#table-of-contents + ul) {
-				margin-bottom: 2rem;
-				padding: 1rem;
-				background: var(--color-bg-offset);
-				border: 1px solid var(--color-border);
-				border-radius: var(--radius);
-				list-style: none;
-			}
-			.prose :global(h2#table-of-contents + ul li) {
-				margin-bottom: 0.5rem;
-			}
-			.prose :global(h2#table-of-contents + ul a) {
-				text-decoration: none;
-				color: var(--color-text-muted);
-			}
-			.prose :global(h2#table-of-contents + ul a:hover) {
-				color: var(--color-accent);
-			}
-
-			@media (min-width: 1200px) {
-				.prose :global(h2#table-of-contents + ul) {
-					position: absolute;
-					top: 0;
-					left: 100%;
-					width: 250px;
-					margin-left: 2rem;
-					margin-bottom: 0;
-				}
-				/* This trick makes the absolutely positioned TOC behave "sticky" within the prose wrapper */
-				.prose-wrapper {
-					/* Need to remove position: relative if we want position: sticky to work based on the viewport?
-					   Wait, position absolute cannot be sticky. Let's do this differently.
-					   Since we want sticky, we should make it float or absolutely position it, but sticky needs to be in flow.
-					   Let's absolute position a wrapper if we had one, but we don't.
-					   Let's rethink: .prose > ul can just have `position: absolute; position: sticky;`? No.
-					   If we set `.prose > ul` to `position: absolute` it leaves the flow, fixing the gap.
-					   But it won't be sticky to the viewport.
-					   To make it sticky without a gap, we can use float.
-					   Actually, if we put position: absolute, it's relative to .prose-wrapper.
-					   Then we can't do position: sticky easily.
-					   What if we just use `float: right; margin-right: -280px; width: 250px; position: sticky; top: 5.5rem;`
-					*/
-				}
-				.prose :global(h2#table-of-contents + ul) {
-					position: sticky;
-					float: right;
-					clear: right;
-					margin-right: -280px;
-					top: 5.5rem; /* navbar height (4.5rem) + 1rem padding */
-					max-height: calc(100vh - 6.5rem);
-					overflow-y: auto;
-				}
-				.prose :global(h2#table-of-contents + ul)::before {
-					content: "Table of Contents";
-					display: block;
-					font-weight: 700;
-					margin-bottom: 0.5rem;
-					color: var(--color-text-main);
-					text-transform: uppercase;
-					font-size: 0.8rem;
-					letter-spacing: 0.05em;
-				}
 			}
 
 			.title {
@@ -209,6 +142,13 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 						)}
 							<hr />
 						</div>
+
+						{toc !== false && headings.length > 0 && (
+							<>
+								<TableOfContents headings={headings} mobile={true} />
+								<TableOfContents headings={headings} mobile={false} />
+							</>
+						)}
 						<slot />
 						</div>
 					</div>
