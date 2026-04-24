@@ -1,0 +1,1178 @@
+[
+  {
+    "title": "Q2SAR: A Quantum Multiple Kernel Learning Approach for Drug Discovery",
+    "year": 2025,
+    "type": "conference-paper",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 212364362,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "A COMMON ANCESTOR OF PDL, CONJUNCTIVE QUERIES, AND UNARY NEGATION FIRST-ORDER",
+    "year": 2025,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025568,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Algorithms to prove the maximum number of MUBs in arbitrary dimension",
+    "year": 2025,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025586,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Selective continuous-variable quantum process tomography",
+    "year": 2025,
+    "type": "journal-article",
+    "orcid": "0000-0003-1987-1183",
+    "putCode": 181599770,
+    "author": "Ariel Bendersky"
+  },
+  {
+    "title": "Feature Relevancy, Necessity and Usefulness: Complexity and Algorithms",
+    "year": 2025,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804278,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "LOCC convertibility of entangled states in infinite-dimensional systems",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 160256551,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Axiomatization of XPath with general data comparison",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025623,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Rauzy Dimension and Finite-State Dimension",
+    "year": 2024,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025621,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Extending Schmidt vector from pure to mixed states for characterizing entanglement",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 172287992,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Challenges in certifying quantum teleportation: Moving beyond the conventional fidelity benchmark",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 156049619,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Computational Complexity of Preferred Subset Repairs on Data-Graphs",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804282,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "Quantum computational complexity of matrix functions",
+    "year": 2024,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804144,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "The distributional uncertainty of the shap score in explainable machine learning",
+    "year": 2024,
+    "type": "book-chapter",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804283,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "Towards exact algorithmic proofs of maximal mutually unbiased bases sets in arbitrary integer dimension",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 157640330,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Modal Logic with Relations over Paths: a Theoretical Development through Comonadic Semantics",
+    "year": 2023,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025609,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "PDL on Steroids: on Expressive Extensions of PDL with Intersection and Converse",
+    "year": 2023,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025582,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Optimal quantum teleportation protocols for fixed average fidelity",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 145352812,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Complementarity between quantum coherence and mixedness: a majorization approach",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 131992599,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Simultaneous quantum estimation of phase and indistinguishability in a two-photon interferometer",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 131360115,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Parameterizing density operators with arbitrary symmetries to gain advantage in quantum state estimation",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953547,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Segmentation of quantum generated sequences by using the Jensen-Shannon divergence",
+    "year": 2023,
+    "type": "other",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953539,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Segmentation of quantum generated sequences by using the Jensen–Shannon divergence",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953534,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "An epistemic approach to model uncertainty in data-graphs",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804277,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "Complexity of solving a system of difference constraints with variables restricted to a finite set",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804280,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "Data-graph repairs: the preferred approach",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804279,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "On the complexity of finding set repairs for data-graphs",
+    "year": 2023,
+    "type": "journal-article",
+    "orcid": "0000-0002-6375-2045",
+    "putCode": 186804113,
+    "author": "Santiago Cifuentes"
+  },
+  {
+    "title": "A logical framework to study concept-learning biases in the presence of multiple explanations",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025565,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Selective quantum state tomography for continuous-variable systems",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0003-1987-1183",
+    "putCode": 110689390,
+    "author": "Ariel Bendersky"
+  },
+  {
+    "title": "Entropy-Based Informational Study of the COVID-19 Series of Data",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 124387478,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "An Algebraic Model for Quantum Unstable States",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953527,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Coherence resource power of isocoherent states",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953537,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Mathematical Models for Unstable Quantum Systems and Gamow States",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953544,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "MaxEnt principle and reduced density matrix estimation",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953550,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Performance of the quantum MaxEnt estimation in the presence of physical symmetries",
+    "year": 2022,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953538,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Characterization of nonsignaling correlations from mutual information",
+    "year": 2021,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 95642792,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "A theory of memory for binary sequences: Evidence for a mental compression algorithm in humans",
+    "year": 2021,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025567,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Fluctuation and dissipation in memoryless open quantum evolutions",
+    "year": 2021,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 105188367,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Generalized coherence vector applied to coherence transformations and quantifiers",
+    "year": 2021,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 86705901,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Partial orbits of quantum gates and full three-particle entanglement",
+    "year": 2021,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953536,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Impossibility of memory in hidden-signaling models for quantum correlations",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 83035589,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Extremal elements of a sublattice of the majorization lattice and approximate majorization",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 71511187,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Characterization of non-signaling correlations from mutual information",
+    "year": 2020,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025596,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Finite controllability for ontology-mediated query answering of crpq",
+    "year": 2020,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025552,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Hidden signaling models for quantum correlations cannot have memory",
+    "year": 2020,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025615,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Towards a more flexible language of thought: Bayesian grammar updates after each concept exposure",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025562,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Evolution of quantum observables: from non-commutativity to commutativity",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953523,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Gamow vectors formalism applied to the Loschmidt echo",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953542,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Transformations of superpositions by means of incoherent operations",
+    "year": 2020,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953529,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Optimal common resource in majorization-based resource theories",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 60083248,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Closure properties of synchronized relations",
+    "year": 2019,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025612,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Representation of spatial sequences using nested rules in human prefrontal cortex",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025561,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Role of indistinguishability in interferometric phase estimation",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 66437018,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Majorization, across the (Quantum) Universe",
+    "year": 2019,
+    "type": "book-chapter",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 67460608,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Special Issue “Quantum Foundations: 90 Years of Uncertainty”",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 53898653,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Frauchiger-Renner argument and quantum histories",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953552,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Generalized contexts for quantum histories",
+    "year": 2019,
+    "type": "book-chapter",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953519,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Hermite–Gaussian model for quantum states",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953528,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Solutions for the MaxEnt problem with symmetry constraints",
+    "year": 2019,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953551,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "The Frauchiger-Renner argument and quantum histories",
+    "year": 2019,
+    "type": "other",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953555,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Resource-theoretic approach to vectorial coherence",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 42767167,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "The lattice of trumping majorization for 4D probability vectors and 2D catalysts",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 41859061,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Polarization monotones of two-dimensional and three-dimensional random electromagnetic fields",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 42778679,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Algorithmic identification of probabilities is hard",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025602,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Bayesian validation of grammar productions for the language of thought",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025599,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Bisimulations on data graphs",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025601,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Distinguishing computable mixtures of quantum states",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025589,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Learning is Compiling: Experience Shapes Concept Learning by Combining Primitives in a Language of Thought",
+    "year": 2018,
+    "type": "other",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025577,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Generalized entropies in quantum and classical statistical theories",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 53750389,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "On an explicit representation of the Łukasiewicz sum as a quantum operation",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 53750388,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Classical Limit and Quantum Logic",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953548,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Contrary quantum histories and contrary inferences",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953533,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Dynamics of algebras in quantum unstable systems",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953521,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Hermite-Gaussian model for quantum states",
+    "year": 2018,
+    "type": "other",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953543,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Histories in quantum mechanics: distinguishing between formalism and interpretation",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953540,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Quantum histories and correlations in quantum measurements",
+    "year": 2018,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953532,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Approximate transformations of bipartite pure-state entanglement from the majorization lattice",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 42778678,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Lossless quantum data compression with exponential penalization: An operational interpretation of the quantum Rényi entropy",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 42778677,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Axiomatizations for downward XPath on data trees",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025605,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Logics of repeating values on data trees and branching counter systems",
+    "year": 2017,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025591,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Model theory of XPath on data trees. Part II: Binary bisimulation and definability",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025616,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Nonsignaling Deterministic Models for Nonlocal Correlations have to be Uncomputable",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025604,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "The language of geometry: Fast comprehension of geometrical primitives and rules in human adults and preschoolers",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025622,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "A Quantum-inspired Version of the Classification Problem",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 53750391,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Classical models for quantum information",
+    "year": 2017,
+    "type": "book",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 53750386,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "On the interpretation of probabilities in generalized probabilistic models",
+    "year": 2017,
+    "type": "book",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936869,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "About the concept of quantum chaos",
+    "year": 2017,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953556,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Unified entropic measures of quantum correlations induced by local measurements",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 25108207,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Quantumness and the role of locality on quantum correlations",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 25108259,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Algorithmic Pseudorandomness in Quantum Setups",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025583,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Randomness and non-locality",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025598,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "A family of generalized quantum entropies: definition and properties",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936872,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Comment on \"quantum Kaniadakis entropy under projective measurement\"",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936868,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Entropic measures of joint uncertainty: Effects of lack of majorization",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936870,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "The Measurement Process in the Generalized Contexts Formalism for Quantum Histories",
+    "year": 2016,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953530,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Classical extension of quantum-correlated separable states",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 21122380,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "On a conjecture regarding Fisher information",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 21122382,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Quantum information as a non-kolmogorovian generalization of Shannon's theory",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 23818925,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Quantum state space dimension as a quantum resource",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 21122381,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Counting the changes of random Δ20 sets",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025576,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Feasible Analysis, Randomness, and Base Invariance",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025618,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Linearizing well quasi-orders and bounding the length of bad sequences",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025581,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Model theory of XPath on data trees. Part I: Bisimulation and characterization",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025617,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Normality in non-integer bases and polynomial time randomness",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025590,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Saturation, definability, and separation for X path on data trees",
+    "year": 2015,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025554,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "A Semiclassical Condition for Chaos Based on Pesin Theorem",
+    "year": 2015,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953525,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Comment on Quantum discord through the generalized entropy in bipartite quantum states",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 21122383,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Quantum correlations from classically correlated states",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 21122384,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "A note on the order type of minoring orderings and some algebraic properties of ω2-well quasi-orderings",
+    "year": 2014,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025600,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Characterization, definability and separation via saturated models",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025571,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Definability for downward and vertical XPath on data trees",
+    "year": 2014,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025619,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Independence friendly logic with classical negation via flattening is a second-order logic with weak dependencies",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025593,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "General entropy-like uncertainty relations in finite dimensions",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936866,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Geometric approach to extend Landau-Pollak uncertainty relations for positive operator-valued measures",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936865,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Geometric formulation of the uncertainty principle",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936867,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Generalized contexts and consistent histories in quantum mechanics",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953531,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Quantum histories without contrary inferences",
+    "year": 2014,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953559,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "19th Workshop on Logic, Language, Information and Computation (WoLLIC 2012)",
+    "year": 2013,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025560,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "LT 2 C 2 : A language of thought with Turing-computable Kolmogorov complexity",
+    "year": 2013,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025579,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "On a generalized entropic uncertainty relation in the case of the qubit",
+    "year": 2013,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936860,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "On the connection between complementarity and uncertainty principles in the Mach-Zehnder interferometric setting",
+    "year": 2013,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936861,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Probabilities for time-dependent properties in classical and quantum mechanics",
+    "year": 2013,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953522,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "The Formalism of Generalized Contexts and Decay Processes",
+    "year": 2013,
+    "type": "journal-article",
+    "orcid": "0000-0001-9588-6665",
+    "putCode": 158953520,
+    "author": "Marcelo Losada"
+  },
+  {
+    "title": "Completeness results for memory logics",
+    "year": 2012,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025610,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Linearizing bad sequences: Upper bounds for the product and majoring well quasi-orders",
+    "year": 2012,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025620,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Collision entropy and optimal uncertainty",
+    "year": 2012,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936862,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "On the effect of noise and electronics bandwidth on a stochastic-resonance memory device",
+    "year": 2011,
+    "type": "conference-paper",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 42778676,
+    "author": "Guido Bellomo"
+  },
+  {
+    "title": "Ackermannian and primitive-recursive bounds with Dickson's Lemma",
+    "year": 2011,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025611,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Basic model theory for memory logics",
+    "year": 2011,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025563,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "On the expressive power of IF-logic with classical negation",
+    "year": 2011,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025588,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "The expressive power of memory logics",
+    "year": 2011,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025608,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Using logic in the generation of referring expressions",
+    "year": 2011,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025559,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Comment on \"Improved bounds on entropic uncertainty relations\"",
+    "year": 2011,
+    "type": "journal-article",
+    "orcid": "0000-0002-3583-7332",
+    "putCode": 30936864,
+    "author": "Martín Bosyk"
+  },
+  {
+    "title": "Counting the changes of random Δ02 sets",
+    "year": 2010,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025606,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "On the formal semantics of IF-like logics",
+    "year": 2010,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025570,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "On the size of shortest modal descriptions",
+    "year": 2010,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025555,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Indifferent sets",
+    "year": 2009,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025584,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Expressive power and decidability for memory logics",
+    "year": 2008,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025592,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Lowness properties and approximations of the jump",
+    "year": 2008,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025613,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "On the computing power of fuzzy Turing machines",
+    "year": 2008,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025578,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Turing's unpublished algorithm for normal numbers",
+    "year": 2007,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025566,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Classical computability and fuzzy Turing machines",
+    "year": 2006,
+    "type": "conference-paper",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025569,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Randomness and halting probabilities",
+    "year": 2006,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025614,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Randomness and universal machines",
+    "year": 2006,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025572,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Kolmogorov complexity for possibly infinite computations",
+    "year": 2005,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025603,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Program size complexity for possibly infinite computations",
+    "year": 2005,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025556,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "An example of a computable absolutely normal number",
+    "year": 2002,
+    "type": "journal-article",
+    "orcid": "0000-0002-8055-397X",
+    "putCode": 188025595,
+    "author": "Santiago Figueira"
+  },
+  {
+    "title": "Noise-assisted Multibit Storage Device",
+    "year": 0,
+    "type": "journal-article",
+    "orcid": "0000-0001-8213-8270",
+    "putCode": 16158256,
+    "author": "Guido Bellomo"
+  }
+]
