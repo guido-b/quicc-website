@@ -1,18 +1,18 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Friedrich Nietzsche';
-export const SITE_DESCRIPTION = 'The academic portfolio of Friedrich Nietzsche.';
+export const SITE_TITLE = 'QuICC group';
+export const SITE_DESCRIPTION = 'Quantum Information, Computation and Communication — Research group at ICC, Universidad de Buenos Aires.';
 
-export const CV_URL = 'https://shravangoswami.com/resume.pdf';
+export const CV_URL = '';
 
 export const CONTACT = {
-  organization: 'Shravan Goswami',
+  organization: 'QuICC — ICC, Universidad de Buenos Aires',
   addressLines: [
-    'Creator of Astro Scholar',
+    'Buenos Aires, Argentina',
   ],
   emails: [
-    'contact@shravangoswami.com',
+    'quicc-group@gmail.com',
   ],
 };
 
@@ -25,29 +25,29 @@ export const SOCIAL_LINKS: ReadonlyArray<{
 }> = [
   {
     label: 'GitHub',
-    href: 'https://github.com/shravanngoswamii/astro-scholar',
+    href: '',
     icon: 'github',
   },
   {
     label: 'Email',
-    href: 'mailto:contact@shravangoswami.com',
+    href: 'mailto:',
     icon: 'email',
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/shravangoswami/',
+    href: '',
     icon: 'linkedin',
   },
   {
     label: 'X',
-    href: 'https://x.com/shravangoswamii',
+    href: '',
     icon: 'twitter',
   },
 ];
 
 export const FOOTER_CREDIT = {
-  designerName: 'Shravan Goswami',
-  designerUrl: 'https://shravangoswami.com',
-  sourceLabel: 'Open Source',
+  designerName: 'QuICC — ICC, UBA',
+  designerUrl: '',
+  sourceLabel: 'Based on Astro Scholar',
   sourceUrl: 'https://github.com/shravanngoswamii/astro-scholar',
 };

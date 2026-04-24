@@ -15,11 +15,11 @@ const teamAuthors = authorsData as AuthorRecord[];
 
 const piMembers = teamAuthors
 	.filter((member) => member.isTeam !== false && !member.alumni && member.role === 'Principal Investigator')
-	.sort((a, b) => (a.sortOrder || 99) - (b.sortOrder || 99));
+	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const currentMembers = teamAuthors
 	.filter((member) => member.isTeam !== false && !member.alumni && member.role !== 'Principal Investigator' && member.role !== 'Dissertation Student')
-	.sort((a, b) => (a.sortOrder || 99) - (b.sortOrder || 99));
+	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const dissertationStudents = teamAuthors
 	.filter((member) => member.isTeam !== false && !member.alumni && member.role === 'Dissertation Student')
@@ -27,11 +27,11 @@ const dissertationStudents = teamAuthors
 
 const alumni = teamAuthors
 	.filter((member) => member.isTeam !== false && member.alumni)
-	.sort((a, b) => (a.sortOrder || 99) - (b.sortOrder || 99));
+	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const collaborators = teamAuthors
 	.filter((member) => member.isTeam === false)
-	.sort((a, b) => (a.sortOrder || 99) - (b.sortOrder || 99));
+	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const withFallback = (member: AuthorRecord) => ({
 	...member,
@@ -160,23 +160,11 @@ const withFallback = (member: AuthorRecord) => ({
 		<Header />
 		<main>
 			<div class="team-hero">
-				<h1>Research Team</h1>
-				<p>Meet the scholars, students, and collaborators shaping the ideas behind this portfolio.</p>
+				<h1>QuICC Team</h1>
+				<p>We are a research group working on quantum information, computation and communication at ICC, Universidad de Buenos Aires.</p>
 			</div>
 
-			{piMembers.map((member) => {
-				const profile = withFallback(member);
-				return (
-					<div class="pi-card author-modal-trigger" data-member={JSON.stringify(member)}>
-						<img src={profile.avatar || profile.fallbackAvatar} alt={profile.name} width="160" height="160" onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`} />
-						<div class="pi-info">
-							<h3>{profile.name}</h3>
-							<span class="pi-title">{profile.title}</span>
-							<p>{profile.bio}</p>
-						</div>
-					</div>
-				);
-			})}
+			
 			
 			<h2>Current Members</h2>
 			<div class="grid-3">
@@ -228,7 +216,7 @@ const withFallback = (member: AuthorRecord) => ({
 
 			{alumni.length > 0 && (
 				<>
-					<h2>Alumni</h2>
+					<h2>Former members</h2>
 					<div class="grid-3">
 						{alumni.map((member) => {
 							const profile = withFallback(member);
