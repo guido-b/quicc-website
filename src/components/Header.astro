@@ -15,14 +15,6 @@ const cvHref = CV_URL ? url(CV_URL) : null;
 			<HeaderLink href={url('/publications')}>Publications</HeaderLink>
 			<HeaderLink href={url('/projects')}>Projects</HeaderLink>
 			<HeaderLink href={url('/team')}>Team</HeaderLink>
-			<div class="dropdown">
-				<button class="dropbtn">Blog</button>
-				<div class="dropdown-content">
-					<HeaderLink href={url('/blog')}>News</HeaderLink>
-					<HeaderLink href={url('/tags')}>Tags</HeaderLink>
-					<HeaderLink href={url('/archive')}>Archive</HeaderLink>
-				</div>
-			</div>
 			{cvHref && <HeaderLink href={cvHref} target="_blank">CV</HeaderLink>}
 		</div>
 
