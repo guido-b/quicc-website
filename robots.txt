@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shravangoswami.com/astro-scholarsitemap-index.xml
+Sitemap: https://guido-b.github.io/quicc-websitesitemap-index.xml
