@@ -4,12 +4,12 @@
     "title": "Core Activities",
     "items": [
       {
-        "title": "Human Resource Development",
-        "description": "Continuous training through teaching undergraduate and graduate courses, supervision of theses, and mentoring of research fellows."
-      },
-      {
         "title": "Basic and Applied Research",
         "description": "Rigorous study of the foundations and theoretical models underlying quantum information and computation, as well as their technological applications."
+      },
+      {
+        "title": "Human Resource Development",
+        "description": "Continuous training through teaching undergraduate and graduate courses, supervision of theses, and mentoring of research fellows."
       },
       {
         "title": "Academic and Scientific Events",

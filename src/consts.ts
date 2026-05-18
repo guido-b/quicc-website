@@ -1,8 +1,8 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'QuICC group';
-export const SITE_DESCRIPTION = 'Quantum Information, Computation and Communication — Research group at ICC, Universidad de Buenos Aires.';
+export const SITE_TITLE = 'QuICC';
+export const SITE_DESCRIPTION = 'Quantum Information, Computation and Communication @ at ICC, Universidad de Buenos Aires';
 
 export const CV_URL = '';
 

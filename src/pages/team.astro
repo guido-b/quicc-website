@@ -6,23 +6,24 @@ import { SITE_TITLE } from '../consts';
 import authorsData from '../data/authors.json';
 import { generateFallbackAvatar } from '../utils/avatar';
 
-type AuthorRecord = (typeof authorsData)[number] & {
-	isTeam?: boolean;
-	year?: number;
-};
+type AuthorRecord = (typeof authorsData)[number];
 
 const teamAuthors = authorsData as AuthorRecord[];
 
 const currentMembers = teamAuthors
-	.filter((member) => member.isTeam !== false && !member.alumni)
+	.filter((member) => member.category === 'current')
 	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
-const alumni = teamAuthors
-	.filter((member) => member.isTeam !== false && member.alumni)
+const students = teamAuthors
+	.filter((member) => member.category === 'student')
 	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const collaborators = teamAuthors
-	.filter((member) => member.isTeam === false)
+	.filter((member) => member.category === 'collaborator')
+	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
+
+const formerMembers = teamAuthors
+	.filter((member) => member.category === 'former')
 	.sort((a, b) => (a.sortOrder ?? 99) - (b.sortOrder ?? 99));
 
 const withFallback = (member: AuthorRecord) => ({
@@ -34,19 +35,25 @@ const withFallback = (member: AuthorRecord) => ({
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`Team | ${SITE_TITLE}`} description="Research Team & Collaborators" />
+		<BaseHead
+			title={`Team | ${SITE_TITLE}`}
+			description="Research Team & Collaborators"
+		/>
+
 		<style>
 			.team-hero {
 				text-align: center;
 				margin-bottom: 3rem;
 				padding: 2rem 0;
 			}
+
 			.team-hero h1 {
 				font-family: var(--font-serif);
 				font-size: 3.2rem;
 				margin: 0 0 1rem 0;
 				letter-spacing: -0.02em;
 			}
+
 			.team-hero p {
 				font-size: 1.15rem;
 				color: var(--color-text-muted);
@@ -55,7 +62,13 @@ const withFallback = (member: AuthorRecord) => ({
 				line-height: 1.7;
 			}
 
+			.section-title {
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
+			}
+
 			/* Cards */
+
 			.team-card {
 				text-align: center;
 				padding: 1.5rem;
@@ -65,6 +78,7 @@ const withFallback = (member: AuthorRecord) => ({
 				transition: all 0.2s ease;
 				cursor: pointer;
 			}
+
 			.team-card:hover {
 				transform: translateY(-4px);
 				box-shadow: var(--shadow-md);
@@ -72,6 +86,7 @@ const withFallback = (member: AuthorRecord) => ({
 			}
 
 			/* Avatar */
+
 			.team-avatar {
 				width: 140px;
 				height: 140px;
@@ -87,12 +102,33 @@ const withFallback = (member: AuthorRecord) => ({
 				font-size: 1.05rem;
 				display: block;
 				color: var(--color-text-main);
+				margin-bottom: 0.25rem;
 			}
 
 			.team-role {
-				font-size: 0.9rem;
+				font-size: 0.92rem;
 				color: var(--color-accent);
 			}
+
+			.team-links {
+				display: flex;
+				justify-content: center;
+				gap: 0.8rem;
+				margin-top: 0.7rem;
+			}
+
+			.team-link {
+				font-size: 0.9rem;
+				color: var(--color-text-muted);
+				text-decoration: none;
+				transition: color 0.2s ease;
+			}
+
+			.team-link:hover {
+				color: var(--color-accent);
+			}
+
+			/* Collaborators */
 
 			.collab-grid {
 				display: grid;
@@ -100,6 +136,7 @@ const withFallback = (member: AuthorRecord) => ({
 				gap: 1.5rem;
 				margin-top: 1.5rem;
 			}
+
 			.collab-card {
 				display: flex;
 				gap: 1rem;
@@ -111,11 +148,13 @@ const withFallback = (member: AuthorRecord) => ({
 				cursor: pointer;
 				transition: all 0.2s ease;
 			}
+
 			.collab-card:hover {
 				border-color: var(--color-accent);
 				transform: translateY(-2px);
 				box-shadow: var(--shadow-md);
 			}
+
 			.collab-card img {
 				width: 48px;
 				height: 48px;
@@ -123,14 +162,16 @@ const withFallback = (member: AuthorRecord) => ({
 				object-fit: cover;
 				flex-shrink: 0;
 			}
+
 			.collab-info .collab-name {
 				font-weight: 700;
 				font-size: 0.95rem;
 				color: var(--color-text-main);
 				display: block;
 			}
+
 			.collab-info .collab-affil {
-				font-size: 0.8rem;
+				font-size: 0.85rem;
 				color: var(--color-text-muted);
 			}
 
@@ -144,43 +185,27 @@ const withFallback = (member: AuthorRecord) => ({
 
 	<body>
 		<Header />
+
 		<main>
 			<div class="team-hero">
 				<h1>QuICC Team</h1>
+
 				<p>
-					We are a research group working on quantum information, computation and communication
-					at ICC, Universidad de Buenos Aires.
+					We are a research group working on quantum information,
+					computation and communication at ICC, Universidad de Buenos Aires.
 				</p>
 			</div>
 
-			<h2>Current Members</h2>
-			<div class="grid-3">
-				{currentMembers.map((member) => {
-					const profile = withFallback(member);
-					return (
-						<div
-							class="team-card interactive-card author-modal-trigger"
-							data-member={JSON.stringify(member)}
-						>
-							<img
-								src={profile.avatar || profile.fallbackAvatar}
-								alt={profile.name}
-								class="team-avatar"
-								onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
-							/>
-							<span class="team-name">{profile.name}</span>
-							<span class="team-role">{profile.title}</span>
-						</div>
-					);
-				})}
-			</div>
+			{/* Current Members */}
 
-			{alumni.length > 0 && (
+			{currentMembers.length > 0 && (
 				<>
-					<h2>Former Members</h2>
+					<h2 class="section-title">Current Members</h2>
+
 					<div class="grid-3">
-						{alumni.map((member) => {
+						{currentMembers.map((member) => {
 							const profile = withFallback(member);
+
 							return (
 								<div
 									class="team-card interactive-card author-modal-trigger"
@@ -192,8 +217,12 @@ const withFallback = (member: AuthorRecord) => ({
 										class="team-avatar"
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
 									/>
+
 									<span class="team-name">{profile.name}</span>
-									<span class="team-role">{profile.title}</span>
+
+									<span class="team-role">{profile.role}</span>
+
+									
 								</div>
 							);
 						})}
@@ -201,23 +230,100 @@ const withFallback = (member: AuthorRecord) => ({
 				</>
 			)}
 
+			{/* Students */}
+
+			{students.length > 0 && (
+				<>
+					<h2 class="section-title">Students</h2>
+
+					<div class="grid-3">
+						{students.map((member) => {
+							const profile = withFallback(member);
+
+							return (
+								<div
+									class="team-card interactive-card author-modal-trigger"
+									data-member={JSON.stringify(member)}
+								>
+									<img
+										src={profile.avatar || profile.fallbackAvatar}
+										alt={profile.name}
+										class="team-avatar"
+										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
+									/>
+
+									<span class="team-name">{profile.name}</span>
+
+									<span class="team-role">{profile.role}</span>
+								</div>
+							);
+						})}
+					</div>
+				</>
+			)}
+
+			{/* Collaborators */}
+
 			{collaborators.length > 0 && (
 				<>
-					<h2>Collaborators</h2>
+					<h2 class="section-title">Collaborators</h2>
+
 					<div class="collab-grid">
 						{collaborators.map((member) => {
 							const profile = withFallback(member);
+
 							return (
-								<div class="collab-card author-modal-trigger" data-member={JSON.stringify(member)}>
+								<div
+									class="collab-card author-modal-trigger"
+									data-member={JSON.stringify(member)}
+								>
 									<img
 										src={profile.avatar || profile.fallbackAvatar}
 										alt={profile.name}
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
 									/>
+
 									<div class="collab-info">
-										<span class="collab-name">{profile.name}</span>
-										<span class="collab-affil">{profile.title}</span>
+										<span class="collab-name">
+											{profile.name}
+										</span>
+
+										<span class="collab-affil">
+											{profile.role}
+										</span>
 									</div>
+								</div>
+							);
+						})}
+					</div>
+				</>
+			)}
+
+			{/* Former Members */}
+
+			{formerMembers.length > 0 && (
+				<>
+					<h2 class="section-title">Former Members</h2>
+
+					<div class="grid-3">
+						{formerMembers.map((member) => {
+							const profile = withFallback(member);
+
+							return (
+								<div
+									class="team-card interactive-card author-modal-trigger"
+									data-member={JSON.stringify(member)}
+								>
+									<img
+										src={profile.avatar || profile.fallbackAvatar}
+										alt={profile.name}
+										class="team-avatar"
+										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
+									/>
+
+									<span class="team-name">{profile.name}</span>
+
+									<span class="team-role">{profile.role}</span>
 								</div>
 							);
 						})}

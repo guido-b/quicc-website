@@ -101,7 +101,14 @@ const formatAuthor = (auth: Author) => {
     				object-fit: contain;
     				border-radius: 0;
     				box-shadow: none;
-			}            
+			}
+            .hero-image {
+                position: relative;
+            }
+
+            .hero-image img {
+                position: absolute;
+            }            
             .pub-mini-item {
                 margin-bottom: 1.5rem;
                 padding-bottom: 1.5rem;
@@ -121,6 +128,18 @@ const formatAuthor = (auth: Author) => {
                 .hero-image img { width: 200px; height: 200px; }
                 .hero-buttons { justify-content: center; }
 			}
+
+            .logo-dark {
+                display: none;
+            }
+
+            html[data-theme="dark"] .logo-light {
+                display: none;
+            }
+
+            html[data-theme="dark"] .logo-dark {
+                display: block;
+            }
 		</style>
 	</head>
 	<body>
@@ -142,15 +161,32 @@ const formatAuthor = (auth: Author) => {
 					</div>
 				</div>
 				<div class="hero-image">
-					<Image src={url('/quicc_w.png')} width={280} height={280} alt="Professor Portrait" fetchpriority="high" decoding="async" />
-				</div>
+                    <Image 
+                        src={url('/quicc_lightt.png')} 
+                        width={280} 
+                        height={280} 
+                        alt="QuICC Logo" 
+                        class="logo-light"
+                        fetchpriority="high" 
+                        decoding="async" 
+                    />
+                    <Image 
+                        src={url('/quicc_darkk.png')} 
+                        width={280} 
+                        height={280} 
+                        alt="QuICC Logo" 
+                        class="logo-dark"
+                        fetchpriority="high" 
+                        decoding="async" 
+                    />
+                </div>
 			</section>
 
 			<hr style="margin: 3rem 0; border-top: 1px solid var(--color-border);" />
 
 			<div class="grid-2" style="gap: 4rem; margin-top: 0;">
                 <section>
-                    <h2 style="margin-top: 0;">Selected Publications</h2>
+                    <h2 style="margin-top: 0;">Latest Publications</h2>
                     <div class="publication-list">
                         {publications.length > 0 ? publications.map((pub) => (
                             <div class="pub-mini-item">

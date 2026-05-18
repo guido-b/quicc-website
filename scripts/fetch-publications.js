@@ -1,9 +1,28 @@
 import fs from "fs/promises";
 
+// =========================
+// LOAD EXISTING
+// =========================
+let existing = [];
+
+try {
+  existing = JSON.parse(
+    await fs.readFile("./src/data/publications.json", "utf-8")
+  );
+} catch {
+  existing = [];
+}
+
+// =========================
+// LOAD ORCIDS
+// =========================
 const ORCIDS = JSON.parse(
   await fs.readFile("./src/data/orcids.json", "utf-8")
 );
 
+// =========================
+// FETCH FUNCTIONS
+// =========================
 async function fetchWorks(orcid) {
   const res = await fetch(`https://pub.orcid.org/v3.0/${orcid}/works`, {
     headers: { Accept: "application/json" }
@@ -22,6 +41,9 @@ async function fetchWorkDetails(orcid, putCode) {
   return res.json();
 }
 
+// =========================
+// EXTRACTORS
+// =========================
 function extractAuthors(contributors) {
   if (!contributors) return [];
 
@@ -40,6 +62,20 @@ function extractDOI(externalIds) {
   return doi ? doi["external-id-value"].toLowerCase() : null;
 }
 
+function extractArxiv(externalIds) {
+  if (!externalIds) return null;
+
+  const arxiv = externalIds["external-id"]?.find(
+    (id) =>
+      id["external-id-type"] === "arxiv" ||
+      id["external-id-type"] === "arXiv"
+  );
+
+  return arxiv
+    ? `https://arxiv.org/abs/${arxiv["external-id-value"]}`
+    : null;
+}
+
 function extractVenue(work) {
   return (
     work["journal-title"]?.value ||
@@ -49,18 +85,28 @@ function extractVenue(work) {
   );
 }
 
-// 🔥 clave de deduplicación
-function getKey(pub) {
-  if (pub.doi) return `doi:${pub.doi}`;
-  return `title:${pub.title.toLowerCase()}-${pub.year}`;
+// =========================
+// DEDUPLICATION
+// =========================
+function normalizeTitle(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "")
+    .trim();
 }
 
-// 🔥 merge inteligente
+function getKey(pub) {
+  if (pub.doi) return `doi:${pub.doi}`;
+  return `title:${normalizeTitle(pub.title)}-${pub.year}`;
+}
+
+// =========================
+// MERGE LOGIC
+// =========================
 function mergePubs(existing, incoming) {
   return {
     ...existing,
 
-    // preferir datos más ricos
     venue:
       existing.venue !== "Preprint"
         ? existing.venue
@@ -68,65 +114,85 @@ function mergePubs(existing, incoming) {
 
     url: existing.url || incoming.url,
 
-    // unir autores sin duplicados
+    arxiv: existing.arxiv || incoming.arxiv,
+
     authors: Array.from(
       new Set([...(existing.authors || []), ...(incoming.authors || [])])
     )
   };
 }
 
+// =========================
+// INITIAL MAP (WITH EXISTING)
+// =========================
 let publicationsMap = {};
 
+for (const pub of existing) {
+  publicationsMap[getKey(pub)] = pub;
+}
+
+// =========================
+// FETCH LOOP
+// =========================
 for (const researcher of ORCIDS) {
   console.log(`Fetching ${researcher.name}...`);
 
   const works = await fetchWorks(researcher.orcid);
 
   for (const work of works) {
-    const details = await fetchWorkDetails(
-      researcher.orcid,
-      work["put-code"]
-    );
+    try {
+      const details = await fetchWorkDetails(
+        researcher.orcid,
+        work["put-code"]
+      );
 
-    const title = details.title?.title?.value || "No title";
+      const title = details.title?.title?.value || "No title";
 
-    const year =
-      parseInt(details["publication-date"]?.year?.value) || 0;
+      const year =
+        parseInt(details["publication-date"]?.year?.value) || 0;
 
-    const authors = extractAuthors(
-      details.contributors?.contributor || []
-    );
+      const authors = extractAuthors(
+        details.contributors?.contributor || []
+      );
 
-    const doi = extractDOI(details["external-ids"]);
+      const doi = extractDOI(details["external-ids"]);
+      const arxiv = extractArxiv(details["external-ids"]);
+      const venue = extractVenue(details);
 
-    const venue = extractVenue(details);
+      const pub = {
+        title,
+        year,
+        authors,
+        venue,
+        doi,
+        arxiv,
+        url: doi ? `https://doi.org/${doi}` : null
+      };
 
-    const pub = {
-      title,
-      year,
-      authors,
-      venue,
-      doi,
-      url: doi ? `https://doi.org/${doi}` : null
-    };
+      const key = getKey(pub);
 
-    const key = getKey(pub);
-
-    if (publicationsMap[key]) {
-      publicationsMap[key] = mergePubs(publicationsMap[key], pub);
-    } else {
-      publicationsMap[key] = pub;
+      if (publicationsMap[key]) {
+        publicationsMap[key] = mergePubs(publicationsMap[key], pub);
+      } else {
+        publicationsMap[key] = pub;
+      }
+    } catch (err) {
+      console.warn("Error fetching work:", err);
     }
   }
 }
 
-// pasar a array
+// =========================
+// FINAL ARRAY
+// =========================
 let publications = Object.values(publicationsMap);
 
-// ordenar
+// ordenar por año (desc)
 publications.sort((a, b) => b.year - a.year);
 
-// guardar
+// =========================
+// SAVE
+// =========================
 await fs.writeFile(
   "./src/data/publications.json",
   JSON.stringify(publications, null, 2)

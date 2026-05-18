@@ -1,195 +1,191 @@
 [
   {
-    "id": "guido-bellomo",
-    "name": "Guido Bellomo",
-    "title": "Current Member",
-    "role": "Researcher",
-    "bio": "",
-    "avatar": "bellomo.png",
-    "email": "",
-    "google_scholar": "https://scholar.google.com/citations?user=1n7YFKwAAAAJ",
-    "sortOrder": 20,
-    "alumni": false
-  },
-  {
     "id": "santiago-figueira",
     "name": "Santiago Figueira",
-    "title": "Current Member",
+    "category": "current",
     "role": "Researcher",
     "bio": "",
     "avatar": "figueira.png",
-    "email": "",
+    "email": "sfigueir@gmail.com",
     "google_scholar": "https://scholar.google.com/citations?user=WzLmB-4AAAAJ",
-    "sortOrder": 0,
-    "alumni": false
+    "sortOrder": 0
   },
   {
     "id": "ariel-bendersky",
     "name": "Ariel Bendersky",
-    "title": "Current Member",
+    "category": "current",
     "role": "Researcher",
     "bio": "",
     "avatar": "bendersky.png",
-    "email": "",
+    "email": "aribender@dc.uba.ar",
     "google_scholar": "https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q=ariel+bendersky",
-    "sortOrder": 10,
-    "alumni": false
+    "sortOrder": 10
+  },
+  {
+    "id": "guido-bellomo",
+    "name": "Guido Bellomo",
+    "category": "current",
+    "role": "Researcher",
+    "bio": "",
+    "avatar": "bellomo.png",
+    "email": "gbellomo@icc.fcen.uba.ar",
+    "google_scholar": "https://scholar.google.com/citations?user=1n7YFKwAAAAJ",
+    "sortOrder": 20
   },
   {
     "id": "martin-bosyk",
     "name": "Martín Bosyk",
-    "title": "Current Member",
+    "category": "current",
     "role": "Researcher",
     "bio": "",
     "avatar": "bosyk.png",
-    "email": "",
+    "email": "gbosyk@icc.fcen.uba.ar",
     "google_scholar": "https://scholar.google.com/citations?user=ijbdNYEAAAAJ",
-    "sortOrder": 30,
-    "alumni": false
+    "sortOrder": 30
   },
   {
     "id": "marcelo-losada",
     "name": "Marcelo Losada",
-    "title": "Current Member",
+    "category": "current",
     "role": "Researcher",
     "bio": "",
     "avatar": "losada.png",
-    "email": "",
+    "email": "marcelolosada@yahoo.com",
     "google_scholar": "https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q=marcelo+losada",
-    "sortOrder": 40,
-    "alumni": false
-  },
-  {
-    "id": "nicolas-ciancaglini",
-    "name": "Nicolás Ciancaglini",
-    "title": "Current Member",
-    "role": "PhD Student",
-    "bio": "",
-    "avatar": "ciancaglini.png",
-    "email": "",
-    "google_scholar": "https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q=nicolas+ciancaglini",
-    "sortOrder": 50,
-    "alumni": false
+    "sortOrder": 40
   },
   {
     "id": "santiago-cifuentes",
     "name": "Santiago Cifuentes",
-    "title": "Current Member",
-    "role": "Researcher",
+    "category": "current",
+    "role": "PhD Student",
     "bio": "",
     "avatar": "cifuentes.jpg",
-    "email": "",
+    "email": "santiagocifuentes66@hotmail.com",
     "google_scholar": "https://scholar.google.com/citations?user=oZUZmFYAAAAJ",
-    "sortOrder": 60,
-    "alumni": false
+    "sortOrder": 50
+  },
+
+  {
+    "id": "nicolas-ciancaglini",
+    "name": "Nicolás Ciancaglini",
+    "category": "current",
+    "role": "PhD Student",
+    "bio": "",
+    "avatar": "ciancaglini.png",
+    "email": "abejorrop@gmail.com",
+    "google_scholar": "https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q=nicolas+ciancaglini",
+    "sortOrder": 60
   },
   {
     "id": "franco-meroi",
     "name": "Franco Meroi",
-    "title": "Current Member",
+    "category": "current",
     "role": "PhD Student",
     "bio": "",
     "avatar": "meroi.jpg",
-    "email": "",
+    "email": "meroi.f@hotmail.com",
     "google_scholar": "https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q=franco+meroi",
-    "sortOrder": 70,
-    "alumni": false
+    "sortOrder": 70
   },
   {
     "id": "martin-santesteban",
     "name": "Martín Santesteban",
-    "title": "Current Member",
+    "category": "student",
     "role": "Master's Student",
     "bio": "",
     "avatar": "santesteban.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 80,
-    "alumni": false
+    "sortOrder": 100
   },
   {
     "id": "gonzalo-bustos",
     "name": "Gonzalo Bustos",
-    "title": "Current Member",
+    "category": "student",
     "role": "Master's Student",
     "bio": "",
     "avatar": "bustos.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 90,
-    "alumni": false
+    "sortOrder": 110
   },
   {
     "id": "antonella-berzzotti",
     "name": "Antonella Berzzotti",
-    "title": "Current Member",
+    "category": "student",
     "role": "Master's Student",
     "bio": "",
     "avatar": "berzzotti.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 100,
-    "alumni": false
+    "sortOrder": 120
   },
   {
     "id": "zoe-marino",
     "name": "Zoe Marino",
-    "title": "Current Member",
+    "category": "student",
     "role": "Master's Student",
     "bio": "",
     "avatar": "marino.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 110,
-    "alumni": false
+    "sortOrder": 130
   },
 
   {
     "id": "alejandro-diaz-caro",
     "name": "Alejandro Diaz-Caro",
-    "title": "Former Member",
+    "category": "former",
     "role": "Former Member",
     "bio": "",
     "avatar": "diaz-caro.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 200,
-    "alumni": true
+    "sortOrder": 200
   },
   {
     "id": "gabriel-senno",
     "name": "Gabriel Senno",
-    "title": "Former Member",
+    "category": "former",
     "role": "Former Member",
     "bio": "",
     "avatar": "senno.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 210,
-    "alumni": true
+    "sortOrder": 210
   },
   {
     "id": "ignacio-perito",
-    "name": "Ignacio Perito", 
-    "title": "Former Member",
+    "name": "Ignacio Perito",
+    "category": "former",
     "role": "Former Member",
     "bio": "",
     "avatar": "perito.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 220,
-    "alumni": true
+    "sortOrder": 220
+  },
+  {
+    "id": "cesar-massri",
+    "name": "César Massri",
+    "category": "collaborator",
+    "role": "Collaborator",
+    "bio": "",
+    "avatar": "cesar.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 150
   },
   {
     "id": "patricio-bruno",
     "name": "Patricio Bruno",
-    "title": "Former Member",
-    "role": "Former Member",
+    "category": "collaborator",
+    "role": "Collaborator",
     "bio": "",
     "avatar": "bruno.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 230,
-    "alumni": true
+    "sortOrder": 160
   }
 ]

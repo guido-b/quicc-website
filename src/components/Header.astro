@@ -12,9 +12,10 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         
 		<div class="internal-links">
 			<HeaderLink href={url('/')}>Home</HeaderLink>
-			<HeaderLink href={url('/publications')}>Publications</HeaderLink>
 			<HeaderLink href={url('/projects')}>Projects</HeaderLink>
 			<HeaderLink href={url('/team')}>Team</HeaderLink>
+            <HeaderLink href={url('/blog')}>News</HeaderLink>
+            <HeaderLink href={url('/publications')}>Publications</HeaderLink>
 			{cvHref && <HeaderLink href={cvHref} target="_blank">CV</HeaderLink>}
 		</div>
 
