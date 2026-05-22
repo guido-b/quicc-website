@@ -2,17 +2,25 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'QuICC';
-export const SITE_DESCRIPTION = 'Quantum Information, Computation and Communication @ at ICC, Universidad de Buenos Aires';
+export const SITE_DESCRIPTION =
+  'Quantum Information, Computation and Communication at ICC, Universidad de Buenos Aires';
 
 export const CV_URL = '';
 
 export const CONTACT = {
-  organization: 'QuICC — ICC, Universidad de Buenos Aires',
+  organization: 'QuICC',
+
   addressLines: [
-    'Buenos Aires, Argentina',
+    'Instituto de Ciencias de la Computación (ICC)',
+    'Universidad de Buenos Aires',
+    'Pabellón Cero+Infinito – Ciudad Universitaria',
+    'C1428EGA C.A.B.A.',
   ],
+
+  instituteUrl: 'https://icc.fcen.uba.ar/',
+
   emails: [
-    'quicc-group@gmail.com',
+    'quicc@googlegroups.com',
   ],
 };
 

@@ -34,6 +34,10 @@
         "description": "We study quantum correlations and their role as a resource, enabling applications such as secure key distribution and certified randomness generation."
       },
       {
+        "title": "Quantum Models of Computation and Randomness",
+        "description": "Using tools from computability and complexity theory, we study whether quantum computational models can detect more structure than classical ones, potentially enabling efficient generation of high-quality deterministic randomness."
+      },
+      {
         "title": "Quantum Resource Theories",
         "description": "We explore the role of quantum resources — from coherence to entanglement and beyond — in information processing under restricted sets of operations."
       },
@@ -42,16 +46,8 @@
         "description": "We design certification methods that go beyond average fidelity, incorporating robustness to noise and ensuring the integrity of transmitted quantum states."
       },
       {
-        "title": "Quantum Algorithms for Knowledge Graphs",
-        "description": "We investigate variational quantum algorithms applied to knowledge graphs, combining trainable quantum circuits with classical optimization for link prediction and community detection."
-      },
-      {
-        "title": "Quantum Optimization",
-        "description": "We develop and test quantum algorithms aimed at solving high-complexity optimization problems, using both real quantum devices and simulators."
-      },
-      {
-        "title": "Quantum Models of Computation and Randomness",
-        "description": "Using tools from computability and complexity theory, we study whether quantum computational models can detect more structure than classical ones, potentially enabling efficient generation of high-quality deterministic randomness."
+        "title": "Quantum Machine Learning and Applications",
+        "description": "Research on quantum-enhanced machine learning and variational quantum algorithms, with emphasis on: (i) knowledge graphs and network analysis, including link prediction and community detection; (ii) quantum optimization algorithms for high-complexity problems; and (iii) machine learning techniques applied to quantum cryptography and quantum information tasks."
       }
     ]
   }
