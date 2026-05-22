@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 import authorsData from '../data/authors.json';
 import { generateFallbackAvatar } from '../utils/avatar';
+import { teamImages } from '../data/teamImages';
 
 type AuthorRecord = (typeof authorsData)[number];
 
@@ -28,6 +29,9 @@ const formerMembers = teamAuthors
 
 const withFallback = (member: AuthorRecord) => ({
 	...member,
+	avatarSrc: member.avatar
+		? teamImages[member.avatar as keyof typeof teamImages]?.src
+		: null,
 	fallbackAvatar: generateFallbackAvatar(member.name),
 });
 ---
@@ -209,10 +213,10 @@ const withFallback = (member: AuthorRecord) => ({
 							return (
 								<div
 									class="team-card interactive-card author-modal-trigger"
-									data-member={JSON.stringify(member)}
+									data-member={JSON.stringify(profile)}
 								>
 									<img
-										src={profile.avatar || profile.fallbackAvatar}
+										src={profile.avatarSrc || profile.fallbackAvatar}
 										alt={profile.name}
 										class="team-avatar"
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
@@ -243,10 +247,10 @@ const withFallback = (member: AuthorRecord) => ({
 							return (
 								<div
 									class="team-card interactive-card author-modal-trigger"
-									data-member={JSON.stringify(member)}
+									data-member={JSON.stringify(profile)}
 								>
 									<img
-										src={profile.avatar || profile.fallbackAvatar}
+										src={profile.avatarSrc || profile.fallbackAvatar}
 										alt={profile.name}
 										class="team-avatar"
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
@@ -275,10 +279,10 @@ const withFallback = (member: AuthorRecord) => ({
 							return (
 								<div
 									class="collab-card author-modal-trigger"
-									data-member={JSON.stringify(member)}
+									data-member={JSON.stringify(profile)}
 								>
 									<img
-										src={profile.avatar || profile.fallbackAvatar}
+										src={profile.avatarSrc || profile.fallbackAvatar}
 										alt={profile.name}
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}
 									/>
@@ -312,10 +316,10 @@ const withFallback = (member: AuthorRecord) => ({
 							return (
 								<div
 									class="team-card interactive-card author-modal-trigger"
-									data-member={JSON.stringify(member)}
+									data-member={JSON.stringify(profile)}
 								>
 									<img
-										src={profile.avatar || profile.fallbackAvatar}
+										src={profile.avatarSrc || profile.fallbackAvatar}
 										alt={profile.name}
 										class="team-avatar"
 										onerror={`this.onerror=null;this.src='${profile.fallbackAvatar}'`}

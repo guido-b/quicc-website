@@ -102,6 +102,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         role?: string;
         bio?: string;
         avatar?: string;
+        avatarSrc?: string;
         website?: string;
         github?: string;
         linkedin?: string;
@@ -165,11 +166,13 @@ const cvHref = CV_URL ? url(CV_URL) : null;
 
                 if (modalAvatar) {
                     const fallbackAvatar = generateFallbackAvatar(member.name);
+
                     modalAvatar.onerror = () => {
                         modalAvatar.onerror = null;
                         modalAvatar.src = fallbackAvatar;
                     };
-                    modalAvatar.src = member.avatar || fallbackAvatar;
+
+                    modalAvatar.src = member.avatarSrc || fallbackAvatar;
                     modalAvatar.style.display = 'block';
                 }
 
