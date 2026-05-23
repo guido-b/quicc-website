@@ -1,6 +1,6 @@
 # Contribuir al sitio web de QuICC
 
-Este sitio web está desarrollado con Astro y se publica automáticamente mediante GitHub Pages.
+El sitio web está desarrollado con Astro y se publica automáticamente mediante GitHub Pages.
 
 La mayor parte del contenido puede modificarse directamente desde la interfaz web de GitHub, sin necesidad de instalar nada localmente.
 
@@ -12,53 +12,23 @@ Las entradas del blog se encuentran en:
 
 [`src/content/blog/`](https://github.com/guido-b/quicc-website/tree/main/src/content/blog)
 
-Cada entrada suele estar contenida en su propia carpeta:
+Cada entrada está contenida en un archivo `*.mdx`
 
-```text id="5y8j6m"
-src/content/blog/nombre-del-post/
-```
-
-Ejemplo:
-
-```text id="2kjv8n"
-src/content/blog/cqf2025/
-```
-
-Dentro de cada carpeta normalmente habrá:
-
-* `index.mdx` → texto principal de la entrada
-* imágenes utilizadas en la publicación
-
-Para editar una entrada:
-
-1. Abrir el archivo `index.mdx`
+Para editar/crear una entrada:
+1. Abrir/crear el archivo `*.mdx`
 2. Hacer click en ✏️ **Edit**
 3. Modificar el contenido
 4. Presionar **Commit changes**
 
 El sitio se actualizará automáticamente luego de algunos minutos.
 
----
-
-# Crear una nueva entrada
-
-1. Crear una nueva carpeta dentro de:
-
-[`src/content/blog/`](https://github.com/guido-b/quicc-website/tree/main/src/content/blog)
-
-2. Crear un archivo llamado:
-
-```text id="f61d8h"
-index.mdx
-```
-
-3. Utilizar la siguiente plantilla:
+Al crear una entrada nueva, utilizar la siguiente plantilla:
 
 ```mdx id="dy59j0"
 ---
 title: "Título del post"
 description: "Descripción breve"
-pubDate: 2026-05-20
+pubDate: AAAA-MM-DD
 
 tags:
   - quantum information
@@ -70,7 +40,7 @@ heroImage: "./imagen.png"
 Contenido de la publicación.
 ```
 
-4. Subir las imágenes directamente dentro de la misma carpeta.
+Subir las imágenes directamente dentro de la misma carpeta.
 
 ---
 
@@ -81,7 +51,6 @@ La información sobre proyectos y líneas de investigación se encuentra en:
 [`src/data/projects.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/projects.json)
 
 Allí se pueden modificar:
-
 * líneas de investigación
 * actividades principales
 * descripciones
@@ -98,7 +67,6 @@ La información de los integrantes se encuentra en:
 [`src/data/authors.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/authors.json)
 
 Allí pueden modificarse:
-
 * nombres
 * biografías
 * afiliaciones
@@ -110,7 +78,6 @@ Las imágenes de los integrantes se encuentran en:
 [`src/assets/team/`](https://github.com/guido-b/quicc-website/tree/main/src/assets/team)
 
 Si se agrega una nueva imagen:
-
 1. Subirla a `src/assets/team/`
 2. Registrarla en:
 
@@ -143,7 +110,6 @@ El estado de compilación y publicación puede verse en:
 # Editar directamente desde GitHub
 
 Para cambios pequeños, el flujo más simple es:
-
 1. Abrir el archivo en GitHub
 2. Hacer click en ✏️ **Edit**
 3. Modificar el contenido
