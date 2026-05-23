@@ -1,59 +1,160 @@
-# Contributing
+# Contribuir al sitio web de QuICC
 
-Thank you for your interest in contributing to Academic Portfolio.
+El sitio web está desarrollado con Astro y se publica automáticamente mediante GitHub Pages.
 
-## Before You Start
+La mayor parte del contenido puede modificarse directamente desde la interfaz web de GitHub, sin necesidad de instalar nada localmente.
 
-- Check existing issues and pull requests to avoid duplicate work.
-- For larger changes, open an issue first to discuss approach and scope.
+---
 
-## Development Setup
+# Modificar noticias (News / Blog)
 
-1. Fork the repository and clone your fork.
-2. Install dependencies:
+Las entradas del blog se encuentran en:
 
-```bash
-npm install
+[`src/content/blog/`](https://github.com/guido-b/quicc-website/tree/main/src/content/blog)
+
+Cada entrada está contenida en un archivo `*.mdx`
+
+Para editar/crear una entrada:
+1. Abrir/crear el archivo `*.mdx`
+2. Hacer click en ✏️ **Edit**
+3. Modificar el contenido
+4. Presionar **Commit changes**
+
+El sitio se actualizará automáticamente luego de algunos minutos.
+
+Al crear una entrada nueva, utilizar la siguiente plantilla:
+
+```mdx id="dy59j0"
+---
+title: "Título del post"
+description: "Descripción breve"
+pubDate: AAAA-MM-DD
+
+tags:
+  - quantum information
+  - conferences
+
+heroImage: "./imagen.png"
+---
+
+Contenido de la publicación.
 ```
 
-3. Start the development server:
+Subir las imágenes directamente dentro de la misma carpeta.
 
-```bash
+---
+
+# Modificar proyectos y líneas de investigación
+
+La información sobre proyectos y líneas de investigación se encuentra en:
+
+[`src/data/projects.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/projects.json)
+
+Allí se pueden modificar:
+* líneas de investigación
+* actividades principales
+* descripciones
+* títulos
+
+Es importante conservar correctamente la estructura JSON.
+
+---
+
+# Modificar integrantes del grupo
+
+La información de los integrantes se encuentra en:
+
+[`src/data/authors.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/authors.json)
+
+Allí pueden modificarse:
+* nombres
+* biografías
+* afiliaciones
+* enlaces
+* correos electrónicos
+
+Las imágenes de los integrantes se encuentran en:
+
+[`src/assets/team/`](https://github.com/guido-b/quicc-website/tree/main/src/assets/team)
+
+Si se agrega una nueva imagen:
+1. Subirla a `src/assets/team/`
+2. Registrarla en:
+
+[`src/data/teamImages.ts`](https://github.com/guido-b/quicc-website/blob/main/src/data/teamImages.ts)
+
+---
+
+# Publicaciones
+
+La página de publicaciones se sincroniza automáticamente desde ORCID.
+
+La información generada se almacena en:
+
+[`src/data/publications.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/publications.json)
+
+Ese archivo se actualiza automáticamente mediante GitHub Actions, por lo que normalmente no debe editarse manualmente.
+
+---
+
+# Publicación automática del sitio
+
+El sitio se publica automáticamente mediante GitHub Pages luego de cada commit realizado en la rama `main`.
+
+El estado de compilación y publicación puede verse en:
+
+[`Actions`](https://github.com/guido-b/quicc-website/actions)
+
+---
+
+# Editar directamente desde GitHub
+
+Para cambios pequeños, el flujo más simple es:
+1. Abrir el archivo en GitHub
+2. Hacer click en ✏️ **Edit**
+3. Modificar el contenido
+4. Presionar **Commit changes**
+
+No es necesario instalar nada localmente.
+
+---
+
+# Desarrollo local (opcional)
+
+Para modificaciones más avanzadas:
+
+```bash id="h56x1b"
+npm install
 npm run dev
 ```
 
-4. Build locally before opening a pull request:
+Para compilar la versión final:
 
-```bash
+```bash id="gq0f7m"
 npm run build
 ```
 
-## Branching
+---
 
-- Create a focused branch per change.
-- Use clear branch names, for example: `fix/toc-spacing` or `feat/search-filter`.
+# Estructura general del repositorio
 
-## Pull Request Guidelines
+```text id="yb5k3x"
+src/
+ ├── content/
+ │    └── blog/
+ │
+ ├── data/
+ │    ├── authors.json
+ │    ├── projects.json
+ │    ├── publications.json
+ │    └── teamImages.ts
+ │
+ ├── assets/
+ │    └── team/
+```
 
-- Keep PRs small and focused.
-- Include a clear summary of what changed and why.
-- Link related issues (for example: `Closes #123`).
-- Add screenshots for UI changes.
-- Ensure all checks pass.
+---
 
-## Coding Guidelines
+# Contacto
 
-- Follow the existing code style and project structure.
-- Avoid unrelated refactors in the same PR.
-- Prefer clear naming and small, readable changes.
-
-## Commit Messages
-
-Use clear and descriptive commit messages. Example:
-
-- `fix: add spacing above table of contents`
-- `feat: add team member social links`
-
-## Reporting Bugs and Requesting Features
-
-Please use the issue templates provided in this repository.
+Ante dudas técnicas o problemas con el sitio, contactar a los administradores del repositorio.
