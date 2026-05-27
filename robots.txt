@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guido-b.github.io/quicc-websitesitemap-index.xml
+Sitemap: https://quicc.dc.uba.ar/sitemap-index.xml
