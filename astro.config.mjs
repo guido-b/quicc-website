@@ -8,8 +8,8 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://guido-b.github.io',
-  	base: '/quicc-website',
+	site: 'https://quicc.dc.uba.ar',
+	base: '/',
 	integrations: [
 		mdx(),
 		sitemap()
