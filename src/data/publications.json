@@ -66,6 +66,34 @@
     "url": null
   },
   {
+    "title": "Variational Quantum Models for Knowledge Graph Embeddings on NISQ Devices",
+    "year": 2025,
+    "authors": [
+      "Guido Bellomo",
+      "Martín Santesteban",
+      "Patricio Bruno",
+      "Santiago Cifuentes",
+      "Gustavo Martin Bosyk"
+    ],
+    "venue": "2025 IEEE CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (CHILECON)",
+    "doi": "10.1109/chilecon66915.2025.11476453",
+    "arxiv": null,
+    "url": "https://doi.org/10.1109/chilecon66915.2025.11476453"
+  },
+  {
+    "title": "Quantum imaginary time evolution and the unit-disk maximum independent set problem",
+    "year": 2025,
+    "authors": [
+      "Victor A. Penas",
+      "Marcelo Losada",
+      "Pedro W. Lamberti"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.111.042403",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/physreva.111.042403"
+  },
+  {
     "title": "LOCC convertibility of entangled states in infinite-dimensional systems",
     "year": 2024,
     "authors": [
@@ -191,6 +219,21 @@
     "doi": null,
     "arxiv": null,
     "url": null
+  },
+  {
+    "title": "Information quantifiers and wavelet coherence in time-series associated to COVID-19",
+    "year": 2024,
+    "authors": [
+      "Victoria Vampa",
+      "Andres M. Kowalski",
+      "Federico Holik",
+      "Marcelo Losada",
+      "Mariela Portesi"
+    ],
+    "venue": "SCT Proceedings in Interdisciplinary Insights and Innovations",
+    "doi": "10.56294/piii2024303",
+    "arxiv": null,
+    "url": "https://doi.org/10.56294/piii2024303"
   },
   {
     "title": "Towards exact algorithmic proofs of maximal mutually unbiased bases sets in arbitrary integer dimension",
@@ -331,7 +374,11 @@
       "Losada, M.",
       "Penas, V.A.",
       "Holik, F.",
-      "Lamberti, P.W."
+      "Lamberti, P.W.",
+      "Marcelo Losada",
+      "Víctor A. Penas",
+      "Federico Holik",
+      "Pedro W. Lamberti"
     ],
     "venue": "Physica A: Statistical Mechanics and its Applications",
     "doi": "10.1016/j.physa.2023.129162",
@@ -501,7 +548,11 @@
       "Losada, M.",
       "Penas, V.A.",
       "Holik, F.",
-      "Lamberti, P.W."
+      "Lamberti, P.W.",
+      "Marcelo Losada",
+      "Víctor A. Penas",
+      "Federico Holik",
+      "Pedro W. Lamberti"
     ],
     "venue": "Physica A: Statistical Mechanics and its Applications",
     "doi": "10.1016/j.physa.2022.127517",
@@ -745,7 +796,11 @@
       "Fortin, S.",
       "Gadella, M.",
       "Holik, F.",
-      "Losada, M."
+      "Losada, M.",
+      "S. Fortin",
+      "M. Gadella",
+      "F. Holik",
+      "M. Losada"
     ],
     "venue": "Soft Computing",
     "doi": "10.1007/s00500-019-04546-7",
@@ -912,7 +967,10 @@
     "authors": [
       "Losada, M.",
       "Laura, R.",
-      "Lombardi, O."
+      "Lombardi, O.",
+      "Marcelo Losada",
+      "Roberto Laura",
+      "Olimpia Lombardi"
     ],
     "venue": "Physical Review A",
     "doi": "10.1103/physreva.100.052114",
@@ -1156,7 +1214,11 @@
       "Losada, M.",
       "Fortin, S.",
       "Gadella, M.",
-      "Holik, F."
+      "Holik, F.",
+      "Marcelo Losada",
+      "Sebastian Fortin",
+      "Manuel Gadella",
+      "Federico Holik"
     ],
     "venue": "International Journal of Modern Physics A",
     "doi": "10.1142/s0217751x18501099",
@@ -1207,7 +1269,9 @@
     "year": 2018,
     "authors": [
       "Losada, M.",
-      "Laura, R."
+      "Laura, R.",
+      "Marcelo Losada",
+      "Roberto Laura"
     ],
     "venue": "Quantum Information Processing",
     "doi": "10.1007/s11128-018-2050-3",
